@@ -107,7 +107,7 @@ export default function SobreNosotrosPage() {
   return (
     <div className="bg-white text-[#111111]">
       {/* 1. Hero: Fotografía arquitectónica realista de las instalaciones */}
-      <section className="relative min-h-[500px] lg:min-h-[580px] flex items-center overflow-hidden bg-white border-b border-zinc-200">
+      <section className="relative min-h-[480px] sm:min-h-[520px] lg:min-h-[580px] flex items-center overflow-hidden bg-[#2F3B69] lg:bg-white border-b border-[#232D50] lg:border-zinc-200">
         <div className="absolute inset-0 lg:left-auto lg:right-0 lg:w-[64%] h-full">
           <img
             src="/images/sobre-nosotros-hero.webp"
@@ -115,19 +115,21 @@ export default function SobreNosotrosPage() {
             className="w-full h-full object-cover object-center"
             fetchPriority="high"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-white via-white/80 to-white/20 lg:hidden" />
+          {/* Overlay mobile estilo Inicio (azul marino corporativo, sin degradado vertical blanco) */}
+          <div className="absolute inset-0 bg-gradient-to-b from-[#1C2442]/75 via-[#2F3B69]/55 to-[#1C2442]/80 lg:hidden" />
+          {/* Degradado desktop: fundido suave de izquierda a derecha hacia la foto */}
           <div className="absolute inset-0 bg-gradient-to-r from-white via-white/80 to-transparent to-35% hidden lg:block" />
         </div>
 
-        <div className="relative z-10 mx-auto max-w-6xl px-6 py-24 lg:py-32 w-full">
-          <div className="max-w-lg lg:max-w-xl space-y-4 lg:-translate-x-3">
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight text-[#111111] leading-[1.12]">
+        <div className="relative z-10 mx-auto max-w-6xl px-6 py-20 sm:py-24 lg:py-32 w-full">
+          <div className="max-w-2xl mx-auto text-center lg:text-left lg:mx-0 lg:max-w-xl space-y-4 lg:-translate-x-3">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight text-white lg:text-[#111111] leading-[1.12] drop-shadow-[0_2px_12px_rgba(0,0,0,0.35)] lg:drop-shadow-none">
               Sobre nosotros
             </h1>
-            <p className="text-xl font-medium text-[#2F3B69]">
+            <p className="text-xl font-medium text-blue-100 lg:text-[#2F3B69] drop-shadow-[0_1px_6px_rgba(0,0,0,0.3)] lg:drop-shadow-none">
               Abogados Asturias y Asociados
             </p>
-            <p className="pt-2 text-base sm:text-lg text-zinc-600 leading-relaxed max-w-lg">
+            <p className="pt-2 text-base sm:text-lg text-white/95 lg:text-zinc-600 leading-relaxed max-w-lg mx-auto lg:mx-0 drop-shadow-[0_1px_6px_rgba(0,0,0,0.3)] lg:drop-shadow-none font-normal">
               Nuestra firma de abogados fue fundada hace más de 25 años. A lo
               largo del tiempo, nuestro despacho ha ampliado su volumen, número
               de empleados y áreas de práctica para brindar una cobertura
